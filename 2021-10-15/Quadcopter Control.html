@@ -1,0 +1,75 @@
+<div style="font-family:Calibri;font-size:18px">
+
+<h1 style="color:blue">Quadcopter Control</h1>
+
+<p>
+The goal of this work is PoC for methodology and software to calculate adaptive close-loop control for a quadcopter. 
+We are talking about smart auto-pilot which allows the UAV to flight autonomously, ideally without human operator.
+</p>
+<p>
+Quadcopter is described by simplified (air resistance during movement and wind are neglected) non-linear dynamic model with dimensions of state and control vectors are 12 and 4 respectively.
+Iterative linear quadratic regulator is used for control.
+For each maneuver we would set up desirable trajectories of state coordinates and calculate feedbacks vs. time to minimize deviation between actual and desirable trajectories.
+</p>
+
+<img src="Images\Quadcopter.png"/>
+
+<p>
+Quadcopter is highly non-linear, non-stable and considerably underactuated dynamic system.
+These features are taken into account during control generation.
+</p>
+
+<p>
+Some results are presented below.
+The plots depict transients (translations and Euler angles vs. time) of quadcopter for different maneuvers performed under proposed control algorithms.
+</p>
+
+<p>
+<div style="color:blue"><i>1. Transition from hover point with all zero initial conditions to a hover point with <b>x</b> = 10 m, <b>y</b> = -1 m, <b>z</b> = 1 m.</i></div>
+</p>
+<table>
+  <tr>
+    <td><img src="Images\Translations_3-1_t.png"/></td>
+    <td><img src="Images\Angles_3-1_a.png"/></td>
+  </tr>
+</table>
+
+<p>
+<div style="color:blue"><i>2. Movement from hover point in horizontal plane with constant speeds <b>dx/dt</b> = 2 m/s and <b>dy/dt</b> = -3 m/s.</i></div>
+</p>
+<table>
+  <tr>
+    <td><img src="Images\Translations_6-1_t.png"/></td>
+    <td><img src="Images\Angles_6-1_a.png"/></td>
+  </tr>
+</table>
+
+<p>
+<div style="color:blue"><i>3. Brake from horizontal movement with constant speeds <b>dx/dt</b> = 2 m/s and <b>dy/dt</b> = -3 m/s to hover.</i></div>
+</p>
+
+<table>
+  <tr>
+    <td><img src="Images\Translations_12-1_t.png"/></td>
+    <td><img src="Images\Angles_12-1_a.png"/></td>
+  </tr>
+</table>
+
+<p>
+So far this is purely hobbyist project, and I work on it in my spare of the main work time. 
+This is of course not enough to achieve practical result.
+</p>
+
+<p>
+If you will be inetersted then I will be happy to provide more information and data.
+</p>
+<p>
+Thanks for reading.
+</p>
+
+<p>
+Igor Ladnik
+</p>
+
+</div>
+
